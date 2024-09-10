@@ -3,20 +3,29 @@ import axios from "axios"
 
 
 const FetchData = () => {
-    const [data, setdata] = useState()
+    // const [data, setdata] = useState()
+    const [data,setdata]=useState([])
     useEffect(() => {
         const dataFetching = async () => {
-            const data = await axios.get("https://jsonplaceholder.typicode.com/todos/1")
-            console.log(data)
-            setdata(dataFetching.data)
+            const got_data = await axios.get("https://fakestoreapi.com/products")
+            console.log(got_data.data)
+            setdata(got_data.data)
 
         }
+        dataFetching()
     },[])
     return (
-    <div>
-        <ul>
-
-        </ul>
+    <div className='card'>
+       {
+      data.map((card)=>(
+        <div key={card.id} >
+            <img src={card.image} alt="image not found" />
+            <h2>{card.title}</h2>
+            <h3>{card.price}</h3>
+            <p>{card.description}</p>
+        </div>
+      ))
+}
     </div>
     )
 }

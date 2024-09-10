@@ -1,0 +1,38 @@
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.buttons button{
+  height: 40px;
+  background-color: rgb(35, 133, 246);
+  color: aliceblue;
+}
+.func_div{
+  /* border: 1px solid black; */
+  background-color: rgb(131, 195, 195);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.class_div{
+  /* border: 1px solid black; */
+  background-color: rgb(131, 195, 195);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comp{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.class_external{
+  background-color: blueviolet;
+  color: antiquewhite;
+}
+.functional_external{
+  background-color: rgb(242, 152, 245);
+  color: rgb(54, 87, 61);
+}
