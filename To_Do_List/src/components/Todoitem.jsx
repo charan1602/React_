@@ -1,12 +1,12 @@
-const Todoitem = ({title,description,ind,remove})=>{
+const Todoitem = ({title, description, delFun, id})=>{
     return(
         <>
-          <div key={ind} id={ind}>
+          <div className="item">
            <h2>Task:{title}</h2>  
            <p>Description:{description}</p>
            <div className="btn_div">
                 <button >Edit</button>
-                <button onClick={remove(ind)}>Delete</button>
+                <button onClick={() => delFun(id)}>Delete</button>
            </div>
           </div>          
         </>

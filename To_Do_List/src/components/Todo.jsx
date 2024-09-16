@@ -13,15 +13,15 @@ const Forms = ({input,setinput ,additem})=>{
     const handleSubmit = (e)=>{
         e.preventDefault()
         additem(input)
-       console.log(input)
+    //    console.log(input)
     }
     return(
         <>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="forms">
             Title: 
             <input type="text" name="title" value={input.title} onChange={handleChange} />
             Description:
-            <input type="text" name="description" value={input.description} onChange={handleChange}/>
+            <input className="desc" type="text" name="description" value={input.description} onChange={handleChange}/>
             <button type="submit">Submit</button>
         </form>
         </>
